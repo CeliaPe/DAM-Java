@@ -32,12 +32,9 @@ public String toString (){
 	String resultado = "Puerta : Cerrada";
 	if (this.estado){
 		resultado = "Puerta: Abierta";
-
-
 	}
 	resultado = ventanaPuerta + " | " + resultado;
 	return resultado;
-
 }
 
 

@@ -24,11 +24,8 @@ public void apagar(){
 
 public String toString(){
 	String resultado = "Motor: Apagado";
-
 	if (this.estado){
 		resultado = "Motor: Encendido";
-
-
 	}
 	return resultado;
 }
