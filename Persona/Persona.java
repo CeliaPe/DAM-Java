@@ -35,4 +35,8 @@ public class Persona{
     this.dni = dni;
   }
 
+  public String toString(){
+    return "Me llamo " + this.nombre + " y mi dni es " + this.dni + ".";
+  }
+
 }
