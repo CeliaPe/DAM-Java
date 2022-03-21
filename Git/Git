@@ -37,4 +37,7 @@ Git paso a paso:
 4. Para ver los commits realizados:
     - git log.
     - git log -p == Para ver al detalle las modificaciones.
-    - git log -3 == Para ver los 3 últimos. 
+    - git log -3 == Para ver los 3 últimos.
+5. Para hacer commit + (add al mismo tiempo):
+    - git commit -m "solo un commit"
+    - git commit -a -m "con commit -a (add)"
