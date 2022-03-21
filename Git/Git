@@ -15,7 +15,7 @@ deserunt mollit anim id est laborum.
 Modificar para guardar con terminal
 
 
-
+OJO: Para cambiar usuario ir a credenciales.
 
 Git paso a paso:
 1. Entro en la carpeta que quiero que se convierta en un repositorio de git.
@@ -41,3 +41,8 @@ Git paso a paso:
 5. Para hacer commit + (add al mismo tiempo):
     - git commit -m "solo un commit"
     - git commit -a -m "con commit -a (add)"
+6. Para hacer el push:
+6.1. Si no tenemos enlazado el repositorio:
+    - git push "url"
+6.2. Si ya tenemos enlazado el gitHub con el repositorio:
+    - git push
