@@ -27,7 +27,7 @@ public class Matriz{
       for (int j = 0 ; j < this.columnas ; j++){
         System.out.print(this.matriz[i][j]);
       }
-      System.out.println("");
+      System.out.println();
     }
   }
 }
