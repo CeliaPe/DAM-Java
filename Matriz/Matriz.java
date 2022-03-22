@@ -21,13 +21,72 @@ public class Matriz{
       }
     }
   }
+  public void rellenarMatrizFila(){
+    // Rellena cada fila con su número de fila
+    /*
+    -------
+    |0|0|0|
+    -------
+    |1|1|1|
+    -------
+    |2|2|2|
+    -------
+    */
+  }
+  public void rellenarMatrizColumna(){
+    // Rellena cada columna con su número de columna
+    /*
+    -------
+    |0|1|2|
+    -------
+    |0|1|2|
+    -------
+    |0|1|2|
+    -------
+    */
+  }
+  public void rellenarMatrizPosicion(){
+    // Rellena cada posicion con su número
+    /*
+    -------
+    |0|1|2|
+    -------
+    |3|4|5|
+    -------
+    |6|7|8|
+    -------
+    */
+  }
+  public void rellenarMatrizFilaMasCol(){
+    // Rellena cada posicion con su número
+    /*
+    -------
+    |0|1|2|
+    -------
+    |1|2|3|
+    -------
+    |2|3|4|
+    -------
+    */
+  }
+
+  public void lineaH(){
+    for (int i = 0 ; i < this.columnas ; i++){
+      System.out.print("--");
+    }
+    System.out.println("-");
+  }
+
   public void imprimir (){
-    System.out.println("hola");
+    lineaH();
     for (int i = 0 ; i < this.filas ; i++){
+      System.out.print("|");
       for (int j = 0 ; j < this.columnas ; j++){
         System.out.print(this.matriz[i][j]);
+        System.out.print("|");
       }
       System.out.println();
+      lineaH();
     }
   }
 }
