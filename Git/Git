@@ -40,3 +40,5 @@ Git paso a paso:
     - git checkout "nombreRama"
 8.4. Para push una rama nueva:
     - git push "url repositorio del que vamos a crear una rama"
+8.5. Eliminar rama:
+    - git branch -d/-D "rama"
