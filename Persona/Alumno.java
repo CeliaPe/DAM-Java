@@ -1,5 +1,8 @@
 public class Alumno extends Persona{
-  private String grado;
+  private   String grado;               // Acceso desde la propia clase.
+            String gradoSinModificador; // Acceso desde el paquete.
+  protected String gradoProtegido;      // Acceso desde hijos y desde el paquete.
+  public    String gradoPublico;        // Acceso global.
 
 
   public Alumno(){

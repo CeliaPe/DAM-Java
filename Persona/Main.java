@@ -18,6 +18,5 @@ class Main {
     listaAlumno.add(alumnoDefecto);
     System.out.println(listaAlumno);
     System.out.println(listaAlumno.get(0).getNombre());
-
   }
 }
