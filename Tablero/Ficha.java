@@ -7,6 +7,10 @@ public class Ficha{
     this.forma = "X";
     this.color = "azul";
   }
+  public Ficha(String forma){
+    if(forma == "X" || forma == "O") this.forma = forma;
+    this.color = "azul";
+  }
   public Ficha(String forma, String color){
     if(forma == "X" || forma == "O") this.forma = forma;
     this.color = color;
@@ -16,10 +20,10 @@ public class Ficha{
     this.color = ficha.color;
   }
 
-  public String getFicha(){
+  public String getForma(){
     return this.forma;
   }
-  public void setFicha(){
+  public void setForma(){
     this.forma = forma;
   }
   public String getColor(){
