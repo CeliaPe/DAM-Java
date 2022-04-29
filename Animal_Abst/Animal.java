@@ -1,4 +1,4 @@
-abstract class Animal{
+public abstract class Animal{
   protected String alimentacion;
 
   public String durmiendo(){
