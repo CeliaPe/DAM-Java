@@ -23,7 +23,6 @@ public abstract class Contrasenia{
   }
   public abstract boolean tamaValido();
   public abstract boolean charValido();
-
   public boolean contrValida(){
     return this.tamaValido() && this.charValido() && this.noRepetidos();
   }

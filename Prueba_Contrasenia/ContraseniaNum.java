@@ -20,7 +20,7 @@ class ContraseniaNum extends Contrasenia{
     /*// Solución para establecer estructura.
     return "charValido sin implementar";
     */
-    // Solucion mejorable -> Añadir otro bool para optimizar.
+    // Solucion mejorable -> Añadir otro bool para optimizar + isDigit()
     char[] numeros = {48,49,50,51,52,53,54,55,56,57,58};
     boolean valido = true;
     for (int i = 0 ; i < (this.pass).length() && valido; i++){
