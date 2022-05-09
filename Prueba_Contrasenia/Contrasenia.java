@@ -5,11 +5,28 @@ public abstract class Contrasenia{
     this.pass = pass;
   }
 
-  public String noRepetidos(){
-    return "No se reptien";
+  // Set && Get
+
+  public boolean noRepetidos(){
+    //return "Codigo sin implementar: No se reptien";
+    boolean valido = true;
+    int contador = 1;
+    char actual = this.pass.charAt(0), anterior;
+    for (int i = 1 ; i < (this.pass).length() && valido; i++){
+      anterior = actual;
+      actual = this.pass.charAt(i);
+      if (anterior == actual) contador++;
+      else contador = 1;
+      if (contador >= 3) valido = false;
+    }
+    return valido;
   }
-  public abstract String tamaValido();
-  public abstract String charValido();
+  public abstract boolean tamaValido();
+  public abstract boolean charValido();
+
+  public boolean contrValida(){
+    return this.tamaValido() && this.charValido() && this.noRepetidos();
+  }
 
   public String toString(){
     return "La contrasenia es " + this.pass + ".";
