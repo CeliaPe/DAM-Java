@@ -6,8 +6,8 @@
 // butos de nuestra clase) explicado en coche.
 
 public class Persona{
-  private String nombre;
-  private String dni;
+  protected String nombre;
+  protected String dni;
 
   //Constructor
   public Persona(){
