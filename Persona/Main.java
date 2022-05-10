@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class Main {
+public class Main {
   public static void main(String[] args){
     Persona miPersona = new Persona();
     Alumno alumnoDefecto = new Alumno();
@@ -19,5 +19,10 @@ class Main {
     System.out.println(listaAlumno);
     System.out.println(listaAlumno.get(0).getNombre());
     */
+
+    Color arrColores[] = Color.values();
+    for (Color c : arrColores){
+      System.out.println(c);
+    }
   }
 }
