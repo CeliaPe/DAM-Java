@@ -13,8 +13,8 @@ public abstract class Contrasenia{
     int contador = 1;
     char actual = this.pass.charAt(0), anterior;
     for (int i = 1 ; i < (this.pass).length() && valido; i++){
-      anterior = actual;
-      actual = this.pass.charAt(i);
+      anterior = actual; // Queda desfasado el valor actual.
+      actual = this.pass.charAt(i); // Actualizamos el valor actual.
       if (anterior == actual) contador++;
       else contador = 1;
       if (contador >= 3) valido = false;
