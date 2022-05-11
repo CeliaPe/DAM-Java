@@ -47,13 +47,25 @@ public class Main {
 
     System.out.println("Cuantos lapices azules tengo si -2? Me tiene que decir que 0");
     miSegundoColor = Color.valueOf("AZUL");
+    // Si se cambia uno se cambia en todos. Porque lo que se modifica es el ENUM
     miSegundoColor.setNumLapices(-2);
+    System.out.println("Lapices azules para mi segundo color:");
     System.out.println(miSegundoColor.getNumLapices());
+    System.out.println("Lapices azules para mi color:");
+    miColor = Color.valueOf("AZUL");
+    System.out.println(miColor.getNumLapices());
+    // Si se cambia uno se cambia en todos.
+    miSegundoColor.setNumLapices(2);
+    System.out.println("Lapices azules para mi segundo color:");
+    System.out.println(miSegundoColor.getNumLapices());
+    System.out.println("Lapices azules para mi color:");
+    System.out.println(miColor.getNumLapices());
+
     System.out.println("El ordinal mi segundo color AZUL: ");
     System.out.println(miSegundoColor.ordinal());
     System.out.println("El ordinal mi color VERDE: ");
     System.out.println(miColor.ordinal());
-    
+
 
 
   }
