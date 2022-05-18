@@ -1,7 +1,7 @@
 public enum Albergue{
-  SIMPLE(1,50,4),
+  SIMPLE(1,50,2),
   DOBLE(2,80,4),
-  TRIPLE(3,100,4),
+  TRIPLE(3,100,0),
   MULTIPLE(6,150,4);
 
   private int personas;
@@ -31,5 +31,19 @@ public enum Albergue{
   }
   public int getHabitaciones(){
     return this.habitaciones;
+  }
+
+  public boolean numPersValido(int numPersonas){
+    return this.personas >= numPersonas;
+  }
+  public double precioTotal(int numNoches){
+    return numNoches*this.precio;
+  }
+  public double precioPorPersona(int numPersonas, int numNoches){
+    double precioTotal = this.precioTotal(numNoches);
+    return precioTotal/numPersonas;
+  }
+  public double precioPorPersona(double precioTotal, int numPersonas){
+    return precioTotal/numPersonas;
   }
 }
