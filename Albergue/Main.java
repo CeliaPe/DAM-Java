@@ -23,9 +23,9 @@ public class Main{
 
     Albergue habitacion = Albergue.SIMPLE;
     String tipoHabit;
-    int numPersonas = 0, numNoches;
+    int numPersonas = 0, numNoches = 0;
     double precioTotal, precioNoche, precioPorPersona;
-    boolean valido = false;
+    boolean valido = false, boolNoches = false;
 
     //System.out.println("-- Comprobar que el tipo de habitacion es valido --");
     while (!valido){
@@ -39,15 +39,22 @@ public class Main{
         //numPersonas = sc.nextInt(); sc.nextLine();
         numPersonas = Integer.parseInt(sc.nextLine());
         valido = habitacion.numPersValido(numPersonas);
-      } catch (Exception e){
-        System.out.println("Estoy en el catch");
-      } finally {
-        System.out.println("Estoy en el finally");
+      } catch (NumberFormatException exNum){
+        System.out.println("Debe introducir un numero.");
+      } catch (IllegalArgumentException exHab){
+        System.out.println("Los tipos de habitaciones validos son SIMPLE, DOBLE, TRIPLE o MULTIPLE.");
       }
     }
-    System.out.print("Indica el numero de noches que os vais a quedar: ");
-    //numNoches = sc.nextInt(); sc.nextLine();
-    numNoches = Integer.parseInt(sc.nextLine());
+    do{
+      try{
+        System.out.print("Indica el numero de noches que os vais a quedar: ");
+        //numNoches = sc.nextInt(); sc.nextLine();
+        numNoches = Integer.parseInt(sc.nextLine());
+        boolNoches = true;
+      } catch (NumberFormatException exNum){
+        System.out.println("Debe introducir un numero en la cantidad de noches.");
+      }
+    } while (!boolNoches);
     //System.out.println("-- Calcular precio total -- ");
     precioTotal = habitacion.precioTotal(numNoches);
     System.out.println("El precio total es de: " + precioTotal);
