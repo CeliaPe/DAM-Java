@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.HashMap;
 
 class EstructurasDatos{
   public static void pruebaArrayList(){
@@ -76,6 +77,25 @@ class EstructurasDatos{
     System.out.println(colores.getLast());
   }
 
+  public static void pruebaHasMap(){
+    HashMap<String,Integer> edades = new HashMap<String,Integer>();
+    System.out.println("-> Aniadimos dos personas.");
+    edades.put("Celia",26);
+    edades.put("Laura",18);
+    edades.put("Iker",22);
+    System.out.println(edades);
+    System.out.println("-> Consultamos el valor que se guarda en la clave 'Laura'.");
+    System.out.println(edades.get("Laura"));
+    System.out.println("-> Eliminamos la tupla 'Laura=18'.");
+    edades.remove("Laura");
+    System.out.println(edades);
+    System.out.println("Imprimimos values.");
+    System.out.println(edades.values());
+    System.out.println("Imprimimos keySet()");
+    System.out.println(edades.keySet());
+
+  }
+
   public static void main(String[] args) {
 
   // ----------------------------------------------------------------------- //
@@ -86,7 +106,12 @@ class EstructurasDatos{
   // ----------------------------------------------------------------------- //
   // LinkedList
   // ----------------------------------------------------------------------- //
-  pruebaLinkedList();
+  // pruebaLinkedList();
+
+  // ----------------------------------------------------------------------- //
+  // HashMap
+  // ----------------------------------------------------------------------- //
+   pruebaHasMap();
 
   }
 }
