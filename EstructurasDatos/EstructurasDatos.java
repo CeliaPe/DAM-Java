@@ -42,6 +42,38 @@ class EstructurasDatos{
     colores.add("amarillo");
     System.out.println("-> Imprimimos el LinkedList de colores.");
     System.out.println(colores);
+    System.out.println("-> Accedemos al elemento que se encuentra en la primera" +
+    "posicion: La posicion 0.");
+    System.out.println(colores.get(0));
+    System.out.println( "-> Accedemos al elemento que se encuentra en la segunda" +
+                        "posicion: La posicion 1.");
+    System.out.println(colores.get(1));
+    System.out.println( "-> Cambiamos el valor de lo que se encuentra en la " +
+                        "segunda posicion de color amarillo a rojo.");
+    colores.set(1,"rojo");
+    System.out.println(colores);
+    System.out.println("-> Eliminamos el elemento que esta en la segunda posicion.");
+    colores.remove(1);
+    System.out.println(colores);
+    System.out.println("-> Para conocer el tamanio del LinkedList se usa size().");
+    System.out.println(colores.size());
+    System.out.println( "-> Para recorre un LinkedList usamos un bucle. Para " +
+                        " compobarlo aniadimos tres colores mas antes de imprimir.");
+    colores.add("amarillo");
+    colores.add("rojo");
+    colores.add("verde");
+    System.out.println( "-> Aniadimos en la primera posicion negro y en la ultima " +
+                        " blanco.");
+    colores.addFirst("negro");
+    colores.addLast("blanco");
+    for (String c : colores){
+      System.out.println(c);
+    }
+    System.out.println("-> Borramos el primer elemento.");
+    colores.removeFirst();
+    System.out.println(colores);
+    System.out.println("-> Mostramos el ultimo elemento.");
+    System.out.println(colores.getLast());
   }
 
   public static void main(String[] args) {
