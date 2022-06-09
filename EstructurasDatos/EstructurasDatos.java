@@ -96,6 +96,21 @@ class EstructurasDatos{
 
   }
 
+  public static void pruebaVocales(){
+    HashMap<String,ArrayList<String>> vocales = new HashMap<String,ArrayList<String>>();
+    ArrayList<String> palabras = new ArrayList<String>();
+    //ArrayList<String> palabrasConA = new ArrayList<String>();
+    String pal = "avion";
+    palabras.add(pal);
+    vocales.put("a",palabras);
+    System.out.println(vocales);
+    // palabrasConA = vocales.get("a");
+    // palabrasConA.add("albaricoque");
+    vocales.get("a").add("albaricoque");
+    System.out.println(vocales);
+  }
+
+
   public static void main(String[] args) {
 
   // ----------------------------------------------------------------------- //
@@ -111,7 +126,12 @@ class EstructurasDatos{
   // ----------------------------------------------------------------------- //
   // HashMap
   // ----------------------------------------------------------------------- //
-   pruebaHasMap();
+  // pruebaHasMap();
+
+  // ----------------------------------------------------------------------- //
+  // Gestión palabras vocales
+  // ----------------------------------------------------------------------- //
+  pruebaVocales();
 
   }
 }
